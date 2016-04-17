@@ -1,0 +1,476 @@
+2016/04/15 23:44:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii-eventapp.user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `user`.
+in /var/www/yii-eventapp/index.php (13)
+2016/04/16 00:11:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii-eventapp/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii-eventapp/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii-eventapp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii-eventapp/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii-eventapp/index.php?r=user/admin
+HTTP_REFERER=http://localhost/yii-eventapp/index.php?r=user/index
+---
+2016/04/16 19:26:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userList".' in /var/www/yii-eventapp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('userList')
+#1 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-eventapp/index.php/userList
+---
+2016/04/16 19:26:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "userList".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('userList')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('userList')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/userList')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/user/userList
+---
+2016/04/16 19:26:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userList".' in /var/www/yii-eventapp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('userList')
+#1 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-eventapp/index.php/userList
+---
+2016/04/16 19:27:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "userList".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('userList')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('userList')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/userList')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/user/userList
+---
+2016/04/16 19:27:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii-eventapp/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii-eventapp/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii-eventapp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii-eventapp/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('userList')
+#8 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/userList')
+#9 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii-eventapp/index.php/user/userList
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/login
+---
+2016/04/16 19:27:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "userList".' in /var/www/yii-eventapp/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('userList')
+#1 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-eventapp/index.php/userList
+---
+2016/04/16 19:28:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii-eventapp/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii-eventapp/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii-eventapp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii-eventapp/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('userList')
+#8 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/userList')
+#9 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii-eventapp/index.php/user/userList
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/login
+---
+2016/04/16 19:46:59 [error] [exception.CException] exception 'CException' with message 'Alias "zii.widgets.CCistCiew" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /var/www/yii-eventapp/framework/YiiBase.php:323
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CWidgetFactory.php(146): YiiBase::import('zii.widgets.CCi...', true)
+#1 /var/www/yii-eventapp/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(UserController), 'zii.widgets.CCi...', Array)
+#2 /var/www/yii-eventapp/framework/web/CBaseController.php(180): CBaseController->createWidget('zii.widgets.CCi...', Array)
+#3 /var/www/yii-eventapp/protected/views/user/userList.php(10): CBaseController->widget('zii.widgets.CCi...', Array)
+#4 /var/www/yii-eventapp/framework/web/CBaseController.php(126): require('/var/www/yii-ev...')
+#5 /var/www/yii-eventapp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/yii-ev...', Array, true)
+#6 /var/www/yii-eventapp/framework/web/CController.php(869): CBaseController->renderFile('/var/www/yii-ev...', Array, true)
+#7 /var/www/yii-eventapp/framework/web/CController.php(782): CController->renderPartial('userList', Array, true)
+#8 /var/www/yii-eventapp/protected/controllers/UserController.php(13): CController->render('userList', Array)
+#9 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): UserController->actionUserList()
+#10 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii-eventapp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/yii-eventapp/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /var/www/yii-eventapp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/yii-eventapp/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('userList')
+#19 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/userList')
+#20 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-eventapp/index.php/user/userList
+---
+2016/04/16 20:22:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('user')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('user')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/user')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/user/user
+---
+2016/04/16 20:22:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('list')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('list')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/list')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/user/list
+---
+2016/04/16 21:25:02 [error] [php] Undefined index: q (/var/www/yii-eventapp/protected/views/user/userList.php:4)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(869): UserController->renderFile()
+#1 /var/www/yii-eventapp/framework/web/CController.php(782): UserController->renderPartial()
+#2 /var/www/yii-eventapp/protected/controllers/UserController.php(13): UserController->render()
+#3 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): UserController->actionUserList()
+#4 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#6 /var/www/yii-eventapp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii-eventapp/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/yii-eventapp/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#9 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/yii-eventapp/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii-eventapp/framework/web/CController.php(265): UserController->runActionWithFilters()
+#12 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): UserController->run()
+#13 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/user/userList
+in /var/www/yii-eventapp/protected/views/user/userList.php (4)
+in /var/www/yii-eventapp/protected/controllers/UserController.php (13)
+in /var/www/yii-eventapp/index.php (13)
+2016/04/16 21:25:34 [error] [php] Undefined index: q (/var/www/yii-eventapp/protected/views/user/userList.php:4)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(869): UserController->renderFile()
+#1 /var/www/yii-eventapp/framework/web/CController.php(782): UserController->renderPartial()
+#2 /var/www/yii-eventapp/protected/controllers/UserController.php(13): UserController->render()
+#3 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): UserController->actionUserList()
+#4 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#6 /var/www/yii-eventapp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii-eventapp/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/yii-eventapp/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#9 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/yii-eventapp/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii-eventapp/framework/web/CController.php(265): UserController->runActionWithFilters()
+#12 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): UserController->run()
+#13 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/user/userList
+in /var/www/yii-eventapp/protected/views/user/userList.php (4)
+in /var/www/yii-eventapp/protected/controllers/UserController.php (13)
+in /var/www/yii-eventapp/index.php (13)
+2016/04/16 21:46:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii-eventapp/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii-eventapp/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii-eventapp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii-eventapp/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('userFilter')
+#8 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/userFilter')
+#9 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii-eventapp/index.php/user/userFilter?q=
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/user/userList
+---
+2016/04/17 14:21:59 [error] [php] Undefined index: q (/var/www/yii-eventapp/protected/controllers/UserController.php:19)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#1 /var/www/yii-eventapp/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii-eventapp/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii-eventapp/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#4 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii-eventapp/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): UserController->runActionWithFilters()
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): UserController->run()
+#8 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/user/userFilter
+in /var/www/yii-eventapp/protected/controllers/UserController.php (19)
+in /var/www/yii-eventapp/index.php (13)
+2016/04/17 18:10:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('about')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('about')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('site/about')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/site/about
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/index
+---
+2016/04/17 18:17:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii-eventapp/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii-eventapp/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii-eventapp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii-eventapp/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#9 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii-eventapp/index.php/user/index
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/login
+---
+2016/04/17 18:27:21 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "checkAccess".' in /var/www/yii-eventapp/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii-eventapp/protected/views/layouts/main.php(37): CComponent->__call('checkAccess', Array)
+#1 /var/www/yii-eventapp/protected/views/layouts/main.php(37): CWebApplication->checkAccess(Array)
+#2 /var/www/yii-eventapp/framework/web/CBaseController.php(126): require('/var/www/yii-ev...')
+#3 /var/www/yii-eventapp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/yii-ev...', Array, true)
+#4 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/yii-ev...', Array, true)
+#5 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 /var/www/yii-eventapp/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 /var/www/yii-eventapp/framework/web/CBaseController.php(214): COutputProcessor->run()
+#8 /var/www/yii-eventapp/framework/web/CBaseController.php(308): CBaseController->endWidget('CContentDecorat...')
+#9 /var/www/yii-eventapp/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#10 /var/www/yii-eventapp/framework/web/CBaseController.php(126): require('/var/www/yii-ev...')
+#11 /var/www/yii-eventapp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/yii-ev...', Array, true)
+#12 /var/www/yii-eventapp/framework/web/CController.php(784): CBaseController->renderFile('/var/www/yii-ev...', Array, true)
+#13 /var/www/yii-eventapp/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#14 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#15 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#17 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('login')
+#19 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#20 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-eventapp/index.php/site/login
+---
+2016/04/17 18:33:05 [error] [php] Illegal offset type in isset or empty (/var/www/yii-eventapp/framework/web/auth/CWebUser.php:812)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii-eventapp/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii-eventapp/framework/web/CBaseController.php(214): CContentDecorator->run()
+#5 /var/www/yii-eventapp/framework/web/CBaseController.php(308): SiteController->endWidget()
+#6 /var/www/yii-eventapp/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii-eventapp/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii-eventapp/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii-eventapp/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/yii-eventapp/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii-eventapp/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii-eventapp/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php
+in /var/www/yii-eventapp/protected/views/layouts/main.php (37)
+in /var/www/yii-eventapp/protected/views/layouts/column1.php (6)
+in /var/www/yii-eventapp/protected/controllers/SiteController.php (32)
+2016/04/17 18:33:25 [error] [php] Illegal offset type in isset or empty (/var/www/yii-eventapp/framework/web/auth/CWebUser.php:812)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii-eventapp/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii-eventapp/framework/web/CBaseController.php(214): CContentDecorator->run()
+#5 /var/www/yii-eventapp/framework/web/CBaseController.php(308): SiteController->endWidget()
+#6 /var/www/yii-eventapp/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii-eventapp/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii-eventapp/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii-eventapp/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/yii-eventapp/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii-eventapp/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii-eventapp/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/
+in /var/www/yii-eventapp/protected/views/layouts/main.php (37)
+in /var/www/yii-eventapp/protected/views/layouts/column1.php (6)
+in /var/www/yii-eventapp/protected/controllers/SiteController.php (32)
+2016/04/17 18:34:58 [error] [php] Illegal offset type in isset or empty (/var/www/yii-eventapp/framework/web/auth/CWebUser.php:812)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii-eventapp/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii-eventapp/framework/web/CBaseController.php(214): CContentDecorator->run()
+#5 /var/www/yii-eventapp/framework/web/CBaseController.php(308): SiteController->endWidget()
+#6 /var/www/yii-eventapp/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii-eventapp/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii-eventapp/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii-eventapp/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/yii-eventapp/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii-eventapp/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii-eventapp/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/
+in /var/www/yii-eventapp/protected/views/layouts/main.php (37)
+in /var/www/yii-eventapp/protected/views/layouts/column1.php (6)
+in /var/www/yii-eventapp/protected/controllers/SiteController.php (32)
+2016/04/17 18:35:03 [error] [php] Illegal offset type in isset or empty (/var/www/yii-eventapp/framework/web/auth/CWebUser.php:812)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii-eventapp/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii-eventapp/framework/web/CBaseController.php(214): CContentDecorator->run()
+#5 /var/www/yii-eventapp/framework/web/CBaseController.php(308): SiteController->endWidget()
+#6 /var/www/yii-eventapp/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii-eventapp/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii-eventapp/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii-eventapp/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/yii-eventapp/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii-eventapp/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii-eventapp/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/
+in /var/www/yii-eventapp/protected/views/layouts/main.php (37)
+in /var/www/yii-eventapp/protected/views/layouts/column1.php (6)
+in /var/www/yii-eventapp/protected/controllers/SiteController.php (32)
+2016/04/17 18:40:06 [error] [php] Illegal offset type in isset or empty (/var/www/yii-eventapp/framework/web/auth/CWebUser.php:812)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii-eventapp/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii-eventapp/framework/web/CBaseController.php(214): CContentDecorator->run()
+#5 /var/www/yii-eventapp/framework/web/CBaseController.php(308): SiteController->endWidget()
+#6 /var/www/yii-eventapp/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii-eventapp/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii-eventapp/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii-eventapp/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/yii-eventapp/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii-eventapp/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii-eventapp/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/
+in /var/www/yii-eventapp/protected/views/layouts/main.php (37)
+in /var/www/yii-eventapp/protected/views/layouts/column1.php (6)
+in /var/www/yii-eventapp/protected/controllers/SiteController.php (32)
+2016/04/17 18:42:03 [error] [php] Illegal offset type in isset or empty (/var/www/yii-eventapp/framework/web/auth/CWebUser.php:812)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii-eventapp/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii-eventapp/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii-eventapp/framework/web/CBaseController.php(214): CContentDecorator->run()
+#5 /var/www/yii-eventapp/framework/web/CBaseController.php(308): SiteController->endWidget()
+#6 /var/www/yii-eventapp/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii-eventapp/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii-eventapp/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii-eventapp/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/yii-eventapp/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii-eventapp/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii-eventapp/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php
+in /var/www/yii-eventapp/protected/views/layouts/main.php (37)
+in /var/www/yii-eventapp/protected/views/layouts/column1.php (6)
+in /var/www/yii-eventapp/protected/controllers/SiteController.php (32)
+2016/04/17 18:53:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii-eventapp/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii-eventapp/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii-eventapp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii-eventapp/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#9 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii-eventapp/index.php/user/index
+---
+2016/04/17 18:59:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii-eventapp/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii-eventapp/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii-eventapp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii-eventapp/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#9 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii-eventapp/index.php/user/index
+HTTP_REFERER=http://localhost/yii-eventapp/index.php
+---
+2016/04/17 18:59:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii-eventapp/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii-eventapp/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii-eventapp/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii-eventapp/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii-eventapp/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('index')
+#8 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('user/index')
+#9 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii-eventapp/index.php/user/index
+HTTP_REFERER=http://localhost/yii-eventapp/index.php
+---
