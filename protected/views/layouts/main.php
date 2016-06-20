@@ -26,6 +26,12 @@
             <div id="logo" style="height: 31px;">
                 <img style="float: left;" width="32" src="<?php echo Yii::app()->baseUrl ?>/images/event.png" alt="<?php echo CHtml::encode(Yii::app()->name); ?>"/>
                 <span style="display: block; float: left; color: #25A766; font-size: 14px; text-transform: uppercase; margin-top: 7px; margin-left: 7px;"><?php echo CHtml::encode(Yii::app()->name); ?></span>
+                <span style="display: block; float: right;">
+                    <?php if(Yii::app()->user->isGuest) : ?>
+                        <input type="button" value="Sign in" onclick="window.location='<?php echo Yii::app()->createUrl('site/login'); ?>'">
+                        <input type="button" value="Sign up" onclick="window.location='<?php echo Yii::app()->createUrl('site/register'); ?>'">
+                    <?php endif; ?>
+                </span>
             </div>
 	</div><!-- header -->
 
@@ -33,9 +39,9 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),				
-                                array('label'=>'People', 'url'=>array('/user/userList')),
-                                //array('label'=>'Manage People', 'url'=>array('/user/index')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+                                array('label'=>'Find People', 'url'=>array('/user/userList')),
+                                array('label'=>'Find Events', 'url'=>array('/event/eventList')),
+                                array('label'=>'Manage People', 'url'=>array('/user/index')),				
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>

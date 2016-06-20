@@ -38,7 +38,7 @@ return array(
 
 		// uncomment the following to enable URLs in path-format
 		'urlManager'=>array(
-			'urlFormat'=>'path',
+			'urlFormat'=>'path',                        
 			'rules'=>array(
                                 '/userlist' => 'user/user/userList',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',

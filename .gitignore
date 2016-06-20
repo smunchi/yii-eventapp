@@ -1,0 +1,6 @@
+/assets/
+/assets/*
+/runtime/*
+/protected/runtime/application.log
+/nbproject/private/
+/nbproject/
