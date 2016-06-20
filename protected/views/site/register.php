@@ -1,29 +1,21 @@
 <?php
 /* @var $this SiteController */
-/* @var $model LoginForm */
+/* @var $model RegisterForm */
 /* @var $form CActiveForm  */
 
-$this->pageTitle=Yii::app()->name . ' - Login';
+$this->pageTitle=Yii::app()->name . ' - Register';
 $this->breadcrumbs=array(
-	'Login',
+	'Register',
 );
 ?>
 
-<h1>Login</h1>
+<h1>Register</h1>
 
-<?php if(Yii::app()->user->hasFlash('registrationSuccess')): ?>
-
-<div class="flash-success">
-	<?php echo Yii::app()->user->getFlash('registrationSuccess'); ?>
-</div>
-<?php endif; ?>
-
-<p>Please fill out the following form with your login credentials:</p>
+<p>Please fill out the following form to register into the system:</p>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
-	'enableClientValidation'=>true,
+	'id'=>'register-form',	
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
@@ -43,14 +35,14 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'password'); ?>		
 	</div>
 
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
+	<div class="row">		
+		<?php echo $form->labelEx($model,'email'); ?>
+                <?php echo $form->textField($model,'email'); ?>
+		<?php echo $form->error($model,'email'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
+		<?php echo CHtml::submitButton('Register'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -7,6 +7,6 @@ return array(
 	'connectionString' => 'mysql:host=localhost;dbname=yii-eventapp',
 	'emulatePrepare' => true,
 	'username' => 'root',
-	'password' => '123456',
+	'password' => 'go',
 	'charset' => 'utf8',	
 );

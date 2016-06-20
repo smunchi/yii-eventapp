@@ -99,4 +99,19 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+        
+        public function actionRegister() {
+             $model = new User;
+             
+             if(isset($_POST['User'])) {
+                 $model->attributes = $_POST['User'];                  
+                 
+                 if($model->save()) {                    
+                    Yii::app()->user->setFlash('registrationSuccess','Thank you for being a member. welcome on board! <br/> To continue please login using credentials.');		    
+                    $this->redirect(array('site/login'));                 
+                 }
+             }
+             
+             $this->render('register', array('model'=>$model));
+        }
 }
