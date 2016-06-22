@@ -28,8 +28,7 @@
                 <span style="display: block; float: left; color: #25A766; font-size: 14px; text-transform: uppercase; margin-top: 7px; margin-left: 7px;"><?php echo CHtml::encode(Yii::app()->name); ?></span>
                 <span style="display: block; float: right;">
                     <?php if(Yii::app()->user->isGuest) : ?>
-                        <input type="button" value="Sign in" onclick="window.location='<?php echo Yii::app()->createUrl('site/login'); ?>'">
-                        <input type="button" value="Sign up" onclick="window.location='<?php echo Yii::app()->createUrl('site/register'); ?>'">
+                        <input type="button" value="Sign in" onclick="window.location='<?php echo Yii::app()->createUrl('site/login'); ?>'">                        
                     <?php endif; ?>
                 </span>
             </div>
