@@ -7,7 +7,7 @@ $this->breadcrumbs = array(
 <h3>Find people by name</h3>
 <div>
 <form method="get" action="<?php echo Yii::app()->createUrl('/user/userFilter')  ?>">
-    <input type="search" name='q' size='30' value="<?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?>" placeholder="Search people by name or email"/>
+    <input type="search" autocomplete="off" name='q' size='30' value="<?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?>" placeholder="Search people by name or email"/>
     <input type="submit" value="search"/>
 </form>
 </div><br/>
