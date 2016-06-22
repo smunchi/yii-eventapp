@@ -37,3 +37,13 @@ INSERT INTO `user` (`id`, `username`, `password`, `email`) VALUES
 (2, 'karim', 'e10adc3949ba59abbe56e057f20f883e', 'salah_cse_mbstu@yahoo.com'),
 (16, 'rahim', 'e10adc3949ba59abbe56e057f20f883e', 'go');
 
+
+CREATE TABLE IF NOT EXISTS `event` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `created_at` datetime NOT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

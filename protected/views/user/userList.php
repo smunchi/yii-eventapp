@@ -4,7 +4,7 @@ $this->breadcrumbs = array(
         'People',
 ); 
 ?>
-<h3>Browse for people who are member</h3>
+<h3>Find people by name</h3>
 <div>
 <form method="get" action="<?php echo Yii::app()->createUrl('/user/userFilter')  ?>">
     <input type="search" name='q' value="<?php echo isset($_GET['q']) ? $_GET['q'] : ''; ?>" placeholder="Search people by name or email"/>

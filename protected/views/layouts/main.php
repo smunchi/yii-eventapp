@@ -40,8 +40,7 @@
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),				
                                 array('label'=>'Find People', 'url'=>array('/user/userList')),
-                                array('label'=>'Find Events', 'url'=>array('/event/eventList')),
-                                array('label'=>'Manage People', 'url'=>array('/user/index')),				
+                                array('label'=>'Find Events', 'url'=>array('/event/eventList')),                            		
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
