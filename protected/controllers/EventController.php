@@ -26,13 +26,13 @@ class EventController extends Controller {
     }
 
     public function actionCreate() {
-        if ($_POST['create']) {
+        if (isset($_POST['create'])) {
             $event = new Event($_POST);
             $event->save();
             $this->redirect(array('/event/eventList'));
         }
         
-        if($_POST['preview']) {
+        if(isset($_POST['preview'])) {
             Yii::app()->session['eventData'] = $_POST;
             $this->redirect(array('/event/addKeyword'));
         }        
@@ -41,7 +41,19 @@ class EventController extends Controller {
     }
     
     public function actionAddKeyword() {
-       $eventKeyword = Yii::app()->params['eventKeyword'];      
-       $this->render('addKeyword', array('eventKeyword'=>$eventKeyword)); 
+       $eventKeyword = Yii::app()->params['eventKeyword'];
+       $eventData = Yii::app()->session['eventData'];      
+       $existingKeyword = !empty($eventData['keyword']) ? $eventData['keyword']: [];
+       
+       if(isset($_REQUEST['keyword'])){
+           foreach($_REQUEST['keyword'] as $keyword) {
+               if(!in_array($keyword, $existingKeyword)) {
+                   array_push($existingKeyword, $keyword);
+               }
+           }
+       }
+       
+       $eventData['keyword'] = $existingKeyword;          
+       $this->render('addKeyword', array('eventKeyword'=>$eventKeyword, 'existingKeyword'=>$eventData['keyword'])); 
     }    
 }

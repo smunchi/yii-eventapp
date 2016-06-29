@@ -232,11 +232,12 @@ div.search-form
 
 .keywordList a {
     display: inline-block;
-    min-width: 130px;
+    min-width: 160px;
     color: #468847;
     font-size: 14px;
-    padding: 5px;
+    padding: 0 5px;
     margin: 5px;
+    line-height: 26px;
     border: 1px solid lightgreen;
     text-align: center; 
     text-decoration: none;
@@ -244,6 +245,5 @@ div.search-form
 
 .keywordList a:hover {
     color: white;
-    font-weight: bold;
     background-color: #306C01;
 }
