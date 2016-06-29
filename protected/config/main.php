@@ -78,5 +78,9 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'salah_cse_mbstu@yahoo.com',
+                'eventKeyword' =>array(
+                    'School Based' => array('Primary', 'Knowledge', 'SSC', 'Result', 'Passed'),
+                    'College Based' => array('Higher Secondary', 'HSC', 'Meetup', 'BSC', 'BBA', 'MBA'),
+                ),
 	),
 );

@@ -227,3 +227,23 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+
+
+.keywordList a {
+    display: inline-block;
+    min-width: 130px;
+    color: #468847;
+    font-size: 14px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid lightgreen;
+    text-align: center; 
+    text-decoration: none;
+}
+
+.keywordList a:hover {
+    color: white;
+    font-weight: bold;
+    background-color: #306C01;
+}

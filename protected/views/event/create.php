@@ -1,4 +1,4 @@
-<form action="<?php Yii::app()->createUrl('/event/create') ?>" method="post">
+<form action="<?php echo Yii::app()->createUrl('/event/create') ?>" method="post">
     <fieldset style="border: 1px solid #c9e0ed; padding: 15px;">
         <legend>Create a new event</legend>
     <p>
@@ -11,7 +11,7 @@
     </p>
     
     <input type="submit" name="create" value="Create"/>
-    <input type="button" value="Preview"/>
+    <input type="submit" name="preview" value="Preview"/>
     </fieldset>
 </form>
 

@@ -31,6 +31,17 @@ class EventController extends Controller {
             $event->save();
             $this->redirect(array('/event/eventList'));
         }
+        
+        if($_POST['preview']) {
+            Yii::app()->session['eventData'] = $_POST;
+            $this->redirect(array('/event/addKeyword'));
+        }        
+        
         $this->render('create');
     }
+    
+    public function actionAddKeyword() {
+       $eventKeyword = Yii::app()->params['eventKeyword'];      
+       $this->render('addKeyword', array('eventKeyword'=>$eventKeyword)); 
+    }    
 }
