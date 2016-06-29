@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class Event extends CActiveRecord {
+class SystemEvent extends CActiveRecord {
 
     /**
      * @return string the associated database table name

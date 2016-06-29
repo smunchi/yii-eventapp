@@ -4,7 +4,9 @@ $this->breadcrumbs = array(
         'Event',
 ); 
 ?>
-<p><input style="font-size:15px;" type="button" value="Create a new event"/></p>
+<p>
+    <a style="font-size: 16px;" href="<?php echo Yii::app()->createUrl('/event/create') ?>" title="Create a new event from here">Create a new event</a>
+</p>
 <h3>Find event by text</h3>
 <div>
 <form method="get" action="<?php echo Yii::app()->createUrl('/event/eventFilter')  ?>">
