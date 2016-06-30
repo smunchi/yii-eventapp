@@ -53,7 +53,21 @@ class EventController extends Controller {
            }
        }
        
-       $eventData['keyword'] = $existingKeyword;          
+       $eventData['keyword'] = $existingKeyword;
+       Yii::app()->session['eventData'] =  $eventData;
        $this->render('addKeyword', array('eventKeyword'=>$eventKeyword, 'existingKeyword'=>$eventData['keyword'])); 
-    }    
+    }
+    
+    public function actionPreview() {
+        $eventData = Yii::app()->session['eventData'];
+        $this->render('preview', array('eventData' => $eventData));
+    }
+    
+    public function actionSave() {
+        $eventData = Yii::app()->session['eventData'];
+        $event = new Event($eventData);
+        $event->save();
+        Yii::app()->session->remove('eventData');        
+        $this->redirect(array('/event/eventList'));
+    }
 }
