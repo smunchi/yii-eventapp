@@ -45,7 +45,7 @@ class EventController extends Controller {
        $eventData = Yii::app()->session['eventData'];      
        $existingKeyword = !empty($eventData['keyword']) ? $eventData['keyword']: [];
        
-       if(isset($_REQUEST['keyword'])){
+       if(isset($_REQUEST['keyword'])) {
            foreach($_REQUEST['keyword'] as $keyword) {
                if(!in_array($keyword, $existingKeyword)) {
                    array_push($existingKeyword, $keyword);
@@ -60,7 +60,14 @@ class EventController extends Controller {
     
     public function actionPreview() {
         $eventData = Yii::app()->session['eventData'];
-        $this->render('preview', array('eventData' => $eventData));
+        $this->render('view', array('eventData' => $eventData));
+    }
+    
+    public function actionView() {
+        $eventId = Yii::app()->request->getParam('id');
+        $event = new Event($eventId);
+        $eventData = $event->findById();
+        $this->render('view', array('eventData' => $eventData));
     }
     
     public function actionSave() {
