@@ -15,12 +15,19 @@ class EventController extends Controller {
 
     public function actionEventFilter() {
         $criteria = new CDbCriteria();
+        $criteria->select='*';
+        $criteria->alias='E';
 
         if ($q = $_GET['q']) {
             $criteria->compare('title', $q, true, 'OR');
             $criteria->compare('description', $q, true, 'OR');
         }
-
+        
+        if($keyword = $_GET['keyword']) {
+            $criteria->join = 'inner join keyword on keyword.eventId = E.id';
+            $criteria->condition = 'keyword.name="'.$keyword.'"';
+        }
+       
         $dataProvider = new CActiveDataProvider('SystemEvent', array('criteria' => $criteria));
         $this->render('eventList', array('dataProvider' => $dataProvider));
     }

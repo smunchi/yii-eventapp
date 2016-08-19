@@ -9,7 +9,7 @@ if($eventData['keyword']) : ?>
 <p class="keywordList">
 Keywords:<br/>
         <?php foreach($eventData['keyword'] as $value) : ?>   
-                <a href="javascript:void(0);"><?php echo $value; ?></a>
+                <a href="<?php echo Yii::app()->createUrl('/event/eventFilter', array('keyword'=>$value));?>"><?php echo $value; ?></a>
             <?php endforeach; ?>
 </p>
 <?php endif; ?>
