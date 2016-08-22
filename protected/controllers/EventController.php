@@ -10,7 +10,9 @@ class EventController extends Controller {
 
     public function actionEventList() {
         $dataProvider = new CActiveDataProvider('SystemEvent');
-        $this->render('eventList', array('dataProvider' => $dataProvider));
+        $popularKeyword = Yii::app()->params['eventKeyword']['School Based'];
+        
+        $this->render('eventList', array('dataProvider' => $dataProvider, 'popularKeyword' => $popularKeyword));
     }
 
     public function actionEventFilter() {
@@ -29,7 +31,8 @@ class EventController extends Controller {
         }
        
         $dataProvider = new CActiveDataProvider('SystemEvent', array('criteria' => $criteria));
-        $this->render('eventList', array('dataProvider' => $dataProvider));
+        $popularKeyword = Yii::app()->params['eventKeyword']['School Based'];
+        $this->render('eventList', array('dataProvider' => $dataProvider, 'popularKeyword' => $popularKeyword));
     }
 
     public function actionCreate() {
