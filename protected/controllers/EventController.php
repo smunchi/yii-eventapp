@@ -26,8 +26,12 @@ class EventController extends Controller {
         }
         
         if($keyword = $_GET['keyword']) {
+            foreach($keyword as $key) {
+                $content[] = ' keyword.name="'.$key.'" ';
+            }
+            $condition = implode('AND', $content);            
             $criteria->join = 'inner join keyword on keyword.eventId = E.id';
-            $criteria->condition = 'keyword.name="'.$keyword.'"';
+            $criteria->condition = $condition;
         }
        
         $dataProvider = new CActiveDataProvider('SystemEvent', array('criteria' => $criteria));
