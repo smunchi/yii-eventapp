@@ -39,8 +39,8 @@ return array(
 		// uncomment the following to enable URLs in path-format
 		'urlManager'=>array(
 			'urlFormat'=>'path',                        
-			'rules'=>array(
-                                '/uploadEventPhoto'  => '/event/event/upload',
+			'rules'=>array(    
+                                '/savephoto'=>'event/event/savePhoto',
                                 '/userlist' => 'user/user/userList',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

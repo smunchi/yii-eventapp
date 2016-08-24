@@ -19,11 +19,12 @@
         <span>Upload event photo</span>
         <!-- The file input field used as target for the file upload widget -->
         <input id="fileupload" onclick="doUpload($(this), '<?php echo Yii::app()->createUrl('/event/upload') ?>')" type="file" name="files[]" multiple>
-         <div class="photo_preloader"></div>         
+        <div class="photo_preloader"></div>         
     </span>
     </p>    
     <input type="submit" name="create" value="Create"/>
     <input type="submit" name="preview" value="Preview"/>
     </fieldset>
 </form>
+ <div class="uploadDialogContainer"></div>
 

@@ -93,7 +93,50 @@ class EventController extends Controller {
         $this->redirect(array('/event/eventList'));
     }
 
-    public function actionUpload() {        
-        $obj = new UploadHandler();
+    public function actionUpload() {
+        $response = new stdClass();
+        $data = array();
+        $options = array(
+            'print_response' => false
+        );
+
+        $obj = new UploadHandler($options);
+
+        if ($data['file'] = $obj->response['files'][0]->url) {
+            $response->success = true;
+            $response->html = $this->renderPartial('_dialog_template', $data, true);
+            echo json_encode($response);
+            exit;
+        }
     }
+
+    public function actionSavePhoto() {        
+        $imageSrc = Yii::app()->request->getParam('imageSrc');
+        $filename = Yii::app()->request->getParam('filename');
+        $filetype = Yii::app()->request->getParam('filetype');
+        $imagePath = dirname($_SERVER['SCRIPT_FILENAME']) . '/uploads/temp/' . $filename;
+        $imageSrc = str_replace('data:image/png;base64,', '', $imageSrc);
+        $imageSrc = str_replace(' ', '+', $imageSrc);
+        $imageData = base64_decode($imageSrc);
+        $imageObj = imagecreatefromstring($imageData);
+       
+        $typeArr = explode('/', $filetype);
+        $type = array_pop($typeArr);
+        $function = 'image' . $type;
+        header('Content-Type: ' . $filetype);
+        $function($imageObj, $imagePath);
+        imagedestroy($imageObj);
+        list($width, $height, $imageType, $attr) = getimagesize($imagePath);
+        $file = new stdClass();
+        $file->name = $filename;
+        $file->size = filesize($imagePath);
+        $file->type = $imageType;
+        $options = $this->getUploadOptions();
+        $obj = new UploadHandler($options, false);
+        $obj->handle_image_file($imagePath, $file);
+        $file->success = true;
+        echo json_encode($file);
+        exit;       
+    }
+
 }
