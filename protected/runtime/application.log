@@ -474,3 +474,390 @@ Stack trace:
 REQUEST_URI=/yii-eventapp/index.php/user/index
 HTTP_REFERER=http://localhost/yii-eventapp/index.php
 ---
+2016/08/26 19:33:27 [error] [php] move_uploaded_file(/yii-eventapp/files/Untitled-2.jpg): failed to open stream: No such file or directory (/var/www/yii-eventapp/protected/controllers/EventController.php:47)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#2 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#3 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#4 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/create
+in /var/www/yii-eventapp/protected/controllers/EventController.php (47)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 19:33:32 [error] [php] move_uploaded_file(/yii-eventapp/files/Untitled-2.jpg): failed to open stream: No such file or directory (/var/www/yii-eventapp/protected/controllers/EventController.php:47)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#2 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#3 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#4 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/create
+in /var/www/yii-eventapp/protected/controllers/EventController.php (47)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 19:34:10 [error] [php] move_uploaded_file(/yii-eventapp/files/Untitled-2.jpg): failed to open stream: No such file or directory (/var/www/yii-eventapp/protected/controllers/EventController.php:47)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#2 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#3 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#4 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/create
+in /var/www/yii-eventapp/protected/controllers/EventController.php (47)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 19:36:20 [error] [php] move_uploaded_file(/yii-eventapp/files/Untitled-2.jpg): failed to open stream: No such file or directory (/var/www/yii-eventapp/protected/controllers/EventController.php:49)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#2 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#3 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#4 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/create
+in /var/www/yii-eventapp/protected/controllers/EventController.php (49)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 19:36:40 [error] [php] copy(/yii-eventapp/files/Untitled-2.jpg): failed to open stream: No such file or directory (/var/www/yii-eventapp/protected/controllers/EventController.php:49)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#2 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#3 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#4 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/create
+in /var/www/yii-eventapp/protected/controllers/EventController.php (49)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 19:37:27 [error] [php] move_uploaded_file(var/www//yii-eventapp/files/Untitled-2.jpg): failed to open stream: No such file or directory (/var/www/yii-eventapp/protected/controllers/EventController.php:49)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#2 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#3 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#4 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/create
+in /var/www/yii-eventapp/protected/controllers/EventController.php (49)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 19:37:38 [error] [php] move_uploaded_file(var/www/yii-eventapp/files/Untitled-2.jpg): failed to open stream: No such file or directory (/var/www/yii-eventapp/protected/controllers/EventController.php:49)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#2 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#3 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#4 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/create
+in /var/www/yii-eventapp/protected/controllers/EventController.php (49)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 19:39:33 [error] [php] move_uploaded_file(/yii-eventapp/files/Untitled-2.jpg): failed to open stream: No such file or directory (/var/www/yii-eventapp/protected/controllers/EventController.php:47)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#2 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#3 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#4 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/create
+in /var/www/yii-eventapp/protected/controllers/EventController.php (47)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 19:46:32 [error] [php] move_uploaded_file(/yii-eventapp/files/Untitled-2.jpg): failed to open stream: No such file or directory (/var/www/yii-eventapp/protected/controllers/EventController.php:47)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#2 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#3 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#4 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/create
+in /var/www/yii-eventapp/protected/controllers/EventController.php (47)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 19:49:09 [error] [php] move_uploaded_file(/yii-eventapp/files/Untitled-2.jpg): failed to open stream: No such file or directory (/var/www/yii-eventapp/protected/controllers/EventController.php:47)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#2 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#3 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#4 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/create
+in /var/www/yii-eventapp/protected/controllers/EventController.php (47)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 19:50:36 [error] [php] move_uploaded_file(/yii-eventapp/files/Untitled-2.jpg): failed to open stream: No such file or directory (/var/www/yii-eventapp/protected/controllers/EventController.php:47)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#2 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#3 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#4 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/create
+in /var/www/yii-eventapp/protected/controllers/EventController.php (47)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 20:06:45 [error] [php] include(Photo.php): failed to open stream: No such file or directory (/var/www/yii-eventapp/framework/YiiBase.php:432)
+Stack trace:
+#0 /var/www/yii-eventapp/protected/controllers/EventController.php(51): spl_autoload_call()
+#1 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionCreate()
+#2 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#4 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#5 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/create
+in /var/www/yii-eventapp/protected/controllers/EventController.php (51)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 21:12:08 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_by' cannot be null. The SQL statement executed was: INSERT INTO photo SET name = :name, created_by = :created_by, created_at = :created_at.
+in /var/www/yii-eventapp/protected/components/Photo.php (20)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (53)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 21:12:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_by' cannot be null. The SQL statement executed was: INSERT INTO photo SET name = :name, created_by = :created_by, created_at = :created_at' in /var/www/yii-eventapp/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/Photo.php(20): CDbCommand->execute()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(53): Photo->save()
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionCreate()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/create')
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/create
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/create
+---
+2016/08/26 21:58:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'event_photo_id' in 'field list'. The SQL statement executed was: UPDATE photo SET event_photo_id = :event_photo_id WHERE id = :event_id.
+in /var/www/yii-eventapp/protected/components/Event.php (79)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (54)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/26 21:58:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'event_photo_id' in 'field list'. The SQL statement executed was: UPDATE photo SET event_photo_id = :event_photo_id WHERE id = :event_id' in /var/www/yii-eventapp/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/Event.php(79): CDbCommand->execute()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(54): Event::updateEventPhotoId('45', '2')
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionCreate()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/create')
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/create
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/create
+---
+2016/08/27 09:32:00 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_by' cannot be null. The SQL statement executed was: INSERT INTO photo SET name = :name, created_by = :created_by, created_at = :created_at.
+in /var/www/yii-eventapp/protected/components/Photo.php (20)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (53)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/27 09:32:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_by' cannot be null. The SQL statement executed was: INSERT INTO photo SET name = :name, created_by = :created_by, created_at = :created_at' in /var/www/yii-eventapp/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/Photo.php(20): CDbCommand->execute()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(53): Photo->save()
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionCreate()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/create')
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/create
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/create
+---
+2016/08/27 12:31:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_by' cannot be null. The SQL statement executed was: INSERT INTO photo SET name = :name, created_by = :created_by, created_at = :created_at.
+in /var/www/yii-eventapp/protected/components/Photo.php (20)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (53)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/27 12:31:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_by' cannot be null. The SQL statement executed was: INSERT INTO photo SET name = :name, created_by = :created_by, created_at = :created_at' in /var/www/yii-eventapp/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/Photo.php(20): CDbCommand->execute()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(53): Photo->save()
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionCreate()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('create')
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/create')
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/create
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/create
+---
+2016/08/27 19:29:12 [error] [php] Non-static method Event::getLatestEvent() should not be called statically, assuming $this from incompatible context (/var/www/yii-eventapp/protected/controllers/SiteController.php:37)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/yii-eventapp/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/yii-eventapp/framework/web/CController.php(747): SiteController->run()
+#3 /var/www/yii-eventapp/protected/controllers/SiteController.php(25): SiteController->forward()
+#4 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#5 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/yii-eventapp/framework/web/CController.php(286): SiteController->runAction()
+#7 /var/www/yii-eventapp/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php
+in /var/www/yii-eventapp/protected/controllers/SiteController.php (37)
+in /var/www/yii-eventapp/protected/controllers/SiteController.php (25)
+in /var/www/yii-eventapp/index.php (13)
+2016/08/27 19:29:34 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.id' in 'on clause'. The SQL statement executed was: SELECT E.*, P.* FROM event as E LEFT JOIN photo as P on (p.id = E.event_photo_id) ORDER BY created_at desc limit 15.
+in /var/www/yii-eventapp/protected/components/Event.php (86)
+in /var/www/yii-eventapp/protected/controllers/SiteController.php (37)
+in /var/www/yii-eventapp/protected/controllers/SiteController.php (25)
+2016/08/27 19:29:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.id' in 'on clause'. The SQL statement executed was: SELECT E.*, P.* FROM event as E LEFT JOIN photo as P on (p.id = E.event_photo_id) ORDER BY created_at desc limit 15' in /var/www/yii-eventapp/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/yii-eventapp/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /var/www/yii-eventapp/protected/components/Event.php(86): CDbCommand->queryRow()
+#2 /var/www/yii-eventapp/protected/controllers/SiteController.php(37): Event::getLatestEvent()
+#3 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionHome()
+#4 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-eventapp/framework/web/CController.php(747): CController->run('home')
+#8 /var/www/yii-eventapp/protected/controllers/SiteController.php(25): CController->forward('home')
+#9 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('')
+#14 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#15 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii-eventapp/index.php
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/login
+---
+2016/08/27 19:29:57 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'created_at' in order clause is ambiguous. The SQL statement executed was: SELECT E.*, P.* FROM event as E LEFT JOIN photo as P on (P.id = E.event_photo_id) ORDER BY created_at desc limit 15.
+in /var/www/yii-eventapp/protected/components/Event.php (86)
+in /var/www/yii-eventapp/protected/controllers/SiteController.php (37)
+in /var/www/yii-eventapp/protected/controllers/SiteController.php (25)
+2016/08/27 19:29:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'created_at' in order clause is ambiguous. The SQL statement executed was: SELECT E.*, P.* FROM event as E LEFT JOIN photo as P on (P.id = E.event_photo_id) ORDER BY created_at desc limit 15' in /var/www/yii-eventapp/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/yii-eventapp/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /var/www/yii-eventapp/protected/components/Event.php(86): CDbCommand->queryRow()
+#2 /var/www/yii-eventapp/protected/controllers/SiteController.php(37): Event::getLatestEvent()
+#3 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionHome()
+#4 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-eventapp/framework/web/CController.php(747): CController->run('home')
+#8 /var/www/yii-eventapp/protected/controllers/SiteController.php(25): CController->forward('home')
+#9 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('')
+#14 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#15 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii-eventapp/index.php
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/login
+---
+2016/08/27 19:32:06 [error] [exception.CException] exception 'CException' with message 'CDbCommand and its behaviors do not have a method or closure named "queryResult".' in /var/www/yii-eventapp/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/Event.php(86): CComponent->__call('queryResult', Array)
+#1 /var/www/yii-eventapp/protected/components/Event.php(86): CDbCommand->queryResult()
+#2 /var/www/yii-eventapp/protected/controllers/SiteController.php(37): Event::getLatestEvent()
+#3 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionHome()
+#4 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii-eventapp/framework/web/CController.php(747): CController->run('home')
+#8 /var/www/yii-eventapp/protected/controllers/SiteController.php(25): CController->forward('home')
+#9 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('index')
+#14 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#15 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii-eventapp/index.php/site/index
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventList
+---
+2016/08/28 10:14:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "files".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('files')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('files')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('site/files')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/site/files/
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/index
+---
+2016/08/28 10:14:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "files".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('files')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('files')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('site/files')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/site/files/
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/index
+---
+2016/08/28 10:15:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "files".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('files')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('files')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('site/files/sc.p...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/site/files/sc.png
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/index
+---
+2016/08/28 10:15:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "files".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('files')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('files')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('site/files/ 1.p...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/site/files/%201.png
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/index
+---
+2016/08/28 10:15:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "files".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('files')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('files')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('site/files/ 1.p...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/site/files/%201.png
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/index
+---
+2016/08/28 10:15:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "files".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('files')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('files')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('site/files/sc.p...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/site/files/sc.png
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/index
+---

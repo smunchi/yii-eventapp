@@ -39,12 +39,13 @@ class Event {
         $cmd->bindParam(":description", $this->description);
         $cmd->execute();
         
-        if(!empty($this->keyword)) {
-            $eventId = Yii::app()->db->getLastInsertID();
+        $eventId = Yii::app()->db->getLastInsertID();
+        
+        if(!empty($this->keyword)) {            
             $this->saveKeyword($eventId);
         }
         
-        return true;
+        return $eventId;
     }
     
     public function saveKeyword($eventId) {
@@ -68,5 +69,21 @@ class Event {
         $cmd->bindValue(":id", $this->id);
     
         return $cmd->queryRow();
+    }
+    
+    public static function updateEventPhotoId($eventId, $photoId) {
+        $sql = "UPDATE event SET event_photo_id = :event_photo_id WHERE id = :event_id";
+        $cmd = Yii::app()->db->createCommand($sql);
+        $cmd->bindParam(":event_id", $eventId);
+        $cmd->bindParam(":event_photo_id", $photoId);
+        $cmd->execute();
+    }
+    
+    public static function getLatestEvent() {
+        $sql = "SELECT E.*, P.* FROM event as E LEFT JOIN photo as P on (P.id = E.event_photo_id) 
+                WHERE P.name IS NOT NULL ORDER BY E.created_at desc limit 15";
+        $cmd = Yii::app()->db->createCommand($sql);
+    
+        return $cmd->queryAll();
     }
 }

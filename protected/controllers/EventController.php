@@ -42,8 +42,19 @@ class EventController extends Controller {
     public function actionCreate() {
         if (isset($_POST['create'])) {
             $event = new Event($_POST);
-            $event->save();
-            $obj = new UploadHandler();
+            if($eventId = $event->save()) {
+              $file = basename($_FILES['files']['name']);
+              $upload_dir = 'files/';
+              $target_file = $upload_dir . $file;
+              
+              if(move_uploaded_file($_FILES['files']['tmp_name'], $target_file)) {
+                  $photo = new Photo();
+                  $photo->setFileName($file);
+                  $photoId = $photo->save();                  
+                  Event::updateEventPhotoId($eventId, $photoId);                  
+              }
+            }
+            
             $this->redirect(array('/event/eventList'));
         }
 
