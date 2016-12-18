@@ -26,6 +26,9 @@ $this->breadcrumbs = array(
         <?php endforeach; ?>
     <?php endif; ?>
 </form>
+<p>
+    <a href="javascript:void(0)" onclick="saveSearch()">Save this Search</a>
+</p>
 <?php
 /*
  * To change this template, choose Tools | Templates
@@ -38,3 +41,7 @@ $this->widget('zii.widgets.CListView', array(
     'summaryText' => ''
 ));
 ?>
+<?php $this->renderPartial('dialog_save_search');  ?>
+
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/js/jqueryui/jquery-ui.css">
+<script src="<?php echo Yii::app()->request->baseUrl ?>/js/jqueryui/jquery-ui.js" type="text/javascript"></script>

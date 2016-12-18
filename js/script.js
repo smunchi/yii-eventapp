@@ -17,3 +17,11 @@ function removeKeyword(obj) {
     obj.remove();
     $('#eventForm').submit();
 }
+
+$(function () {
+    $('#add_save_search').dialog({autoOpen:false});
+});
+
+function saveSearch() {
+   $('#add_save_search').dialog('open'); 
+}

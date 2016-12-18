@@ -14,11 +14,9 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/js/jqueryui/jquery-ui.css">
         
-        <script src="<?php echo Yii::app()->request->baseUrl ?>/js/jquery.min.js" type="text/javascript"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl ?>/js/jquery.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->request->baseUrl ?>/js/script.js" type="text/javascript"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl ?>/js/jqueryui/jquery-ui.js" type="text/javascript"></script>
         
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -66,5 +64,34 @@
 	</div><!-- footer -->
 </div><!-- page -->
 
+<script>
+$(document).ready(function() {
+$("#add_save_search").dialog({
+	autoOpen: false,
+	width: 400,
+	buttons: [
+		{
+			text: "Ok",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		},
+		{
+			text: "Cancel",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	]
+});
+})
+
+
+// Link to open the dialog
+$("#thelink").click(function( event ) {
+	$("#add_save_search").dialog( "open" );
+	event.preventDefault();
+});
+</script>
 </body>
 </html>
