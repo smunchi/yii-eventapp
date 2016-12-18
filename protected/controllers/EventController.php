@@ -40,21 +40,22 @@ class EventController extends Controller {
     }
 
     public function actionCreate() {
+        $data = array();
         if (isset($_POST['create'])) {
             $event = new Event($_POST);
-            if($eventId = $event->save()) {
-              $file = basename($_FILES['files']['name']);
-              $upload_dir = 'files/';
-              $target_file = $upload_dir . $file;
-              
-              if(move_uploaded_file($_FILES['files']['tmp_name'], $target_file)) {
-                  $photo = new Photo();
-                  $photo->setFileName($file);
-                  $photoId = $photo->save();                  
-                  Event::updateEventPhotoId($eventId, $photoId);                  
-              }
+            if ($eventId = $event->save()) {
+                $file = basename($_FILES['files']['name']);
+                $upload_dir = 'files/';
+                $target_file = $upload_dir . $file;
+
+                if (move_uploaded_file($_FILES['files']['tmp_name'], $target_file)) {
+                    $photo = new Photo();
+                    $photo->setFileName($file);
+                    $photoId = $photo->save();
+                    Event::updateEventPhotoId($eventId, $photoId);
+                }
             }
-            
+
             $this->redirect(array('/event/eventList'));
         }
 
@@ -62,8 +63,21 @@ class EventController extends Controller {
             Yii::app()->session['eventData'] = $_POST;
             $this->redirect(array('/event/addKeyword'));
         }
+        $data['event_data'] = Yii::app()->session['event_data'];
+        $this->render('create', $data);
+    }
 
-        $this->render('create');
+    public function actionSaveInSession() {
+        if ($_REQUEST) {
+            Yii::app()->session['event_data'] = $_REQUEST;
+        }
+        echo json_encode(array('success' => TRUE));
+        exit();
+    }
+
+    public function actionCancelEvent() {
+        Yii::app()->session->remove('event_data');
+        $this->redirect(array('/event/eventList'));
     }
 
     public function actionAddKeyword() {
@@ -102,52 +116,6 @@ class EventController extends Controller {
         $event->save();
         Yii::app()->session->remove('eventData');
         $this->redirect(array('/event/eventList'));
-    }
-
-    public function actionUpload() {
-        $response = new stdClass();
-        $data = array();
-        $options = array(
-            'print_response' => false
-        );
-
-        $obj = new UploadHandler($options);
-
-        if ($data['file'] = $obj->response['files'][0]->url) {
-            $response->success = true;
-            $response->html = $this->renderPartial('_dialog_template', $data, true);
-            echo json_encode($response);
-            exit;
-        }
-    }
-
-    public function actionSavePhoto() {        
-        $imageSrc = Yii::app()->request->getParam('imageSrc');
-        $filename = Yii::app()->request->getParam('filename');
-        $filetype = Yii::app()->request->getParam('filetype');
-        $imagePath = dirname($_SERVER['SCRIPT_FILENAME']) . '/uploads/temp/' . $filename;
-        $imageSrc = str_replace('data:image/png;base64,', '', $imageSrc);
-        $imageSrc = str_replace(' ', '+', $imageSrc);
-        $imageData = base64_decode($imageSrc);
-        $imageObj = imagecreatefromstring($imageData);
-       
-        $typeArr = explode('/', $filetype);
-        $type = array_pop($typeArr);
-        $function = 'image' . $type;
-        header('Content-Type: ' . $filetype);
-        $function($imageObj, $imagePath);
-        imagedestroy($imageObj);
-        list($width, $height, $imageType, $attr) = getimagesize($imagePath);
-        $file = new stdClass();
-        $file->name = $filename;
-        $file->size = filesize($imagePath);
-        $file->type = $imageType;
-        $options = $this->getUploadOptions();
-        $obj = new UploadHandler($options, false);
-        $obj->handle_image_file($imagePath, $file);
-        $file->success = true;
-        echo json_encode($file);
-        exit;       
     }
 
 }
