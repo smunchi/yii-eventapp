@@ -41,6 +41,7 @@ return array(
 			'urlFormat'=>'path',                        
 			'rules'=>array(    
                                 '/savephoto'=>'event/event/savePhoto',
+                                'addsavesearch'=>'event/event/addSaveSearch',
                                 'saveinsession'=>'event/event/saveInSession',                                
                                 '/userlist' => 'user/user/userList',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',

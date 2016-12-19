@@ -18,10 +18,17 @@ function removeKeyword(obj) {
     $('#eventForm').submit();
 }
 
-$(function () {
-    $('#add_save_search').dialog({autoOpen:false});
-});
+function openSaveSearchDialog() {
+  var elementObj = $('#add_save_search');
+  var settings = elementObj.dialog({
+    autoOpen    : false,
+    maxWidth    : 300,
+    height      : 'auto',
+    modal       : true,
+    resizable   : false,
+    buttons     : {},
+    position    : {my: "center",   at: "center",   of: window}
+  });
 
-function saveSearch() {
-   $('#add_save_search').dialog('open'); 
+  settings.dialog("open");
 }

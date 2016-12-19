@@ -861,3 +861,187 @@ Stack trace:
 REQUEST_URI=/yii-eventapp/index.php/site/files/sc.png
 HTTP_REFERER=http://localhost/yii-eventapp/index.php/site/index
 ---
+2016/12/20 02:11:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add_save_search".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('add_save_search')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('add_save_search')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/add_save_...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/add_save_search
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?q=hold&keyword[]=Knowledge
+---
+2016/12/20 02:22:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add_save_search".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('add_save_search')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('add_save_search')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/add_save_...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/add_save_search
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?q=hold&keyword[]=Knowledge
+---
+2016/12/20 02:29:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add_save_search".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('add_save_search')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('add_save_search')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/add_save_...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/add_save_search
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?q=hold
+---
+2016/12/20 02:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add_save_search".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('add_save_search')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('add_save_search')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/add_save_...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/add_save_search
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?q=hold
+---
+2016/12/20 02:35:57 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET name = 'hold with ssc', request_param = ''' at line 1. The SQL statement executed was: INSERT INTO SET name = :name, request_param = :request_param.
+in /var/www/yii-eventapp/protected/components/SaveSearch.php (27)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (127)
+in /var/www/yii-eventapp/index.php (13)
+2016/12/20 02:35:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET name = 'hold with ssc', request_param = ''' at line 1. The SQL statement executed was: INSERT INTO SET name = :name, request_param = :request_param' in /var/www/yii-eventapp/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/SaveSearch.php(27): CDbCommand->execute()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(127): SaveSearch->addSaveSearch()
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionAddSaveSearch()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('addsavesearch')
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/addsavese...')
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/addsavesearch
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?q=hold&keyword%5B%5D=SSC
+---
+2016/12/20 02:37:01 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET name ='hold with ssc', request_param =''' at line 1. The SQL statement executed was: INSERT INTO SET name =:name, request_param =:request_param.
+in /var/www/yii-eventapp/protected/components/SaveSearch.php (27)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (127)
+in /var/www/yii-eventapp/index.php (13)
+2016/12/20 02:37:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET name ='hold with ssc', request_param =''' at line 1. The SQL statement executed was: INSERT INTO SET name =:name, request_param =:request_param' in /var/www/yii-eventapp/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/SaveSearch.php(27): CDbCommand->execute()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(127): SaveSearch->addSaveSearch()
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionAddSaveSearch()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('addsavesearch')
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/addsavese...')
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/addsavesearch
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?q=hold&keyword[]=SSC
+---
+2016/12/20 02:48:01 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET name ='knowledge hold result', request_param ='q=hold&keyword%5B%5D=Knowledg' at line 1. The SQL statement executed was: INSERT INTO SET name =:name, request_param =:request_param.
+in /var/www/yii-eventapp/protected/components/SaveSearch.php (27)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (126)
+in /var/www/yii-eventapp/index.php (13)
+2016/12/20 02:48:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET name ='knowledge hold result', request_param ='q=hold&keyword%5B%5D=Knowledg' at line 1. The SQL statement executed was: INSERT INTO SET name =:name, request_param =:request_param' in /var/www/yii-eventapp/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/SaveSearch.php(27): CDbCommand->execute()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(126): SaveSearch->addSaveSearch()
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionAddSaveSearch()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('addsavesearch')
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/addsavese...')
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/addsavesearch
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?q=hold&keyword%5B%5D=Knowledge&keyword%5B%5D=Result
+---
+2016/12/20 02:50:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii-eventapp.savesearch' doesn't exist. The SQL statement executed was: INSERT INTO savesearch SET name =:name, request_param =:request_param.
+in /var/www/yii-eventapp/protected/components/SaveSearch.php (27)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (126)
+in /var/www/yii-eventapp/index.php (13)
+2016/12/20 02:50:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii-eventapp.savesearch' doesn't exist. The SQL statement executed was: INSERT INTO savesearch SET name =:name, request_param =:request_param' in /var/www/yii-eventapp/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/SaveSearch.php(27): CDbCommand->execute()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(126): SaveSearch->addSaveSearch()
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionAddSaveSearch()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('addsavesearch')
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/addsavese...')
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/addsavesearch
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?q=hold&keyword[]=Knowledge&keyword[]=Result
+---
+2016/12/20 02:51:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii-eventapp.savedsearch' doesn't exist. The SQL statement executed was: INSERT INTO savedsearch SET name =:name, request_param =:request_param.
+in /var/www/yii-eventapp/protected/components/SaveSearch.php (27)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (126)
+in /var/www/yii-eventapp/index.php (13)
+2016/12/20 02:51:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii-eventapp.savedsearch' doesn't exist. The SQL statement executed was: INSERT INTO savedsearch SET name =:name, request_param =:request_param' in /var/www/yii-eventapp/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/SaveSearch.php(27): CDbCommand->execute()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(126): SaveSearch->addSaveSearch()
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionAddSaveSearch()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('addsavesearch')
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/addsavese...')
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/addsavesearch
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?q=hold&keyword[]=Knowledge&keyword[]=Result
+---
+2016/12/20 02:51:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii-eventapp.savedsearch' doesn't exist. The SQL statement executed was: INSERT INTO savedsearch SET name =:name, request_param =:request_param.
+in /var/www/yii-eventapp/protected/components/SaveSearch.php (27)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (126)
+in /var/www/yii-eventapp/index.php (13)
+2016/12/20 02:51:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii-eventapp.savedsearch' doesn't exist. The SQL statement executed was: INSERT INTO savedsearch SET name =:name, request_param =:request_param' in /var/www/yii-eventapp/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/SaveSearch.php(27): CDbCommand->execute()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(126): SaveSearch->addSaveSearch()
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionAddSaveSearch()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('addsavesearch')
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/addsavese...')
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/addsavesearch
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?q=hold&keyword[]=Knowledge&keyword[]=Result
+---
+2016/12/20 02:51:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii-eventapp.savedsearch' doesn't exist. The SQL statement executed was: INSERT INTO savedsearch SET name =:name, request_param =:request_param.
+in /var/www/yii-eventapp/protected/components/SaveSearch.php (27)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (126)
+in /var/www/yii-eventapp/index.php (13)
+2016/12/20 02:51:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii-eventapp.savedsearch' doesn't exist. The SQL statement executed was: INSERT INTO savedsearch SET name =:name, request_param =:request_param' in /var/www/yii-eventapp/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/SaveSearch.php(27): CDbCommand->execute()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(126): SaveSearch->addSaveSearch()
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionAddSaveSearch()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('addsavesearch')
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/addsavese...')
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/addsavesearch
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?q=hold&keyword[]=Knowledge&keyword[]=Result
+---
