@@ -26,9 +26,11 @@ $this->breadcrumbs = array(
         <?php endforeach; ?>
     <?php endif; ?>
 </form>
-<p>
-    <a href="javascript:void(0)" onclick="openSaveSearchDialog()">Save this Search</a>
-</p>
+<?php if((isset($_GET['q']) || isset($_GET['keyword'])) && $dataProvider->getTotalItemCount()) : ?>
+    <p>
+        <a href="javascript:void(0)" onclick="openSaveSearchDialog()">Save this Search</a>
+    </p>
+<?php endif; ?>
 <?php
 /*
  * To change this template, choose Tools | Templates

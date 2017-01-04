@@ -1045,3 +1045,33 @@ Stack trace:
 REQUEST_URI=/yii-eventapp/index.php/event/addsavesearch
 HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?q=hold&keyword[]=Knowledge&keyword[]=Result
 ---
+2017/01/05 03:23:27 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider._totalItemCount" is not defined.' in /var/www/yii-eventapp/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii-eventapp/protected/views/event/eventList.php(31): CComponent->__get('_totalItemCount')
+#1 /var/www/yii-eventapp/framework/web/CBaseController.php(126): require('/var/www/yii-ev...')
+#2 /var/www/yii-eventapp/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/yii-ev...', Array, true)
+#3 /var/www/yii-eventapp/framework/web/CController.php(869): CBaseController->renderFile('/var/www/yii-ev...', Array, true)
+#4 /var/www/yii-eventapp/framework/web/CController.php(782): CController->renderPartial('eventList', Array, true)
+#5 /var/www/yii-eventapp/protected/controllers/EventController.php(15): CController->render('eventList', Array)
+#6 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionEventList()
+#7 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('eventList')
+#11 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/eventList')
+#12 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/eventList
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/user/userList
+---
+2017/01/05 03:29:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/
+---
