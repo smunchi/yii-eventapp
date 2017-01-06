@@ -1075,3 +1075,48 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/yii-eventapp/index.php/event/
 ---
+2017/01/05 04:21:10 [error] [php] Invalid argument supplied for foreach() (/var/www/yii-eventapp/protected/controllers/EventController.php:29)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#1 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#3 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/eventFilter?keyword=HSC
+in /var/www/yii-eventapp/protected/controllers/EventController.php (29)
+in /var/www/yii-eventapp/index.php (13)
+2017/01/05 04:26:01 [error] [php] Invalid argument supplied for foreach() (/var/www/yii-eventapp/protected/views/event/eventList.php:23)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(869): EventController->renderFile()
+#1 /var/www/yii-eventapp/framework/web/CController.php(782): EventController->renderPartial()
+#2 /var/www/yii-eventapp/protected/controllers/EventController.php(45): EventController->render()
+#3 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionEventFilter()
+#4 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#8 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/eventFilter?keyword=HSC
+in /var/www/yii-eventapp/protected/views/event/eventList.php (23)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (45)
+in /var/www/yii-eventapp/index.php (13)
+2017/01/06 12:48:37 [error] [php] Invalid argument supplied for foreach() (/var/www/yii-eventapp/protected/views/event/eventList.php:23)
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(869): EventController->renderFile()
+#1 /var/www/yii-eventapp/framework/web/CController.php(782): EventController->renderPartial()
+#2 /var/www/yii-eventapp/protected/controllers/EventController.php(45): EventController->render()
+#3 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionEventFilter()
+#4 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#6 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#8 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/eventFilter?keyword=HSC
+in /var/www/yii-eventapp/protected/views/event/eventList.php (23)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (45)
+in /var/www/yii-eventapp/index.php (13)

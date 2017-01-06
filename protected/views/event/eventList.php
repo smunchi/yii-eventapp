@@ -20,13 +20,18 @@ $this->breadcrumbs = array(
     </p>
 
     <?php if (isset($_GET['keyword'])) : ?>
-        <?php foreach ($_GET['keyword'] as $key => $data) : ?>
-            <input type="hidden" name="keyword[]" value="<?php echo $data ?>"/>
-            <a href="javascript:void(0)" onclick="removeKeyword($(this))"><?php echo $data; ?><span style="color: red;font-size: 25px;">-</span></a>
-        <?php endforeach; ?>
+        <?php if (is_array($_GET['keyword'])) : ?>
+            <?php foreach ($_GET['keyword'] as $key => $data) : ?>
+                <input type="hidden" name="keyword[]" value="<?php echo $data ?>"/>
+                <a href="javascript:void(0)" onclick="removeKeyword($(this))"><?php echo $data; ?><span style="color: red;font-size: 25px;">-</span></a>
+            <?php endforeach; ?>
+        <?php else: ?>
+                <input type="hidden" name="keyword[]" value="<?php echo $_GET['keyword'] ?>"/>
+                <a href="javascript:void(0)" onclick="removeKeyword($(this))"><?php echo $_GET['keyword']; ?><span style="color: red;font-size: 25px;">-</span></a>
+        <?php endif; ?>
     <?php endif; ?>
 </form>
-<?php if((isset($_GET['q']) || isset($_GET['keyword'])) && $dataProvider->getTotalItemCount()) : ?>
+<?php if ((isset($_GET['q']) || isset($_GET['keyword'])) && $dataProvider->getTotalItemCount()) : ?>
     <p>
         <a href="javascript:void(0)" onclick="openSaveSearchDialog()">Save this Search</a>
     </p>

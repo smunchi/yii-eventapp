@@ -26,9 +26,15 @@ class EventController extends Controller {
         }
 
         if ($keyword = $_GET['keyword']) {
-            foreach ($keyword as $key) {
-                $content[] = ' keyword.name="' . $key . '" ';
+            
+            if (is_array($keyword)) {
+                foreach ($keyword as $key) {
+                    $content[] = ' keyword.name="' . $key . '" ';
+                }
+            } else {
+                $content[] = ' keyword.name="' . $keyword . '" ';
             }
+            
             $condition = implode('AND', $content);
             $criteria->join = 'inner join keyword on keyword.eventId = E.id';
             $criteria->condition = $condition;
@@ -117,15 +123,16 @@ class EventController extends Controller {
         Yii::app()->session->remove('eventData');
         $this->redirect(array('/event/eventList'));
     }
-    
+
     public function actionAddSaveSearch() {
         $name = Yii::app()->request->getParam('name');
         $request_param = Yii::app()->request->getParam('request_param');
-        $data = array('name'=>$name, 'request_param'=>$request_param);        
-        $saveSearch = new SaveSearch($data);        
-        if($saveSearch->addSaveSearch()) {
-            echo json_encode(array("success"=>true));
-            exit();  
-        }             
+        $data = array('name' => $name, 'request_param' => $request_param);
+        $saveSearch = new SaveSearch($data);
+        if ($saveSearch->addSaveSearch()) {
+            echo json_encode(array("success" => true));
+            exit();
+        }
     }
+
 }
