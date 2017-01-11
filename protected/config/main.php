@@ -42,6 +42,7 @@ return array(
 			'rules'=>array(    
                                 '/savephoto'=>'event/event/savePhoto',
                                 'addsavesearch'=>'event/event/addSaveSearch',
+                                'showdialog'=>'event/event/showDialog',
                                 'saveinsession'=>'event/event/saveInSession',                                
                                 '/userlist' => 'user/user/userList',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',

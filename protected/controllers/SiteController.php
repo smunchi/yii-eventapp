@@ -100,5 +100,4 @@ class SiteController extends Controller {
 
         $this->render('register', array('model' => $model));
     }
-
 }

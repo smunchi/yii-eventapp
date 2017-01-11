@@ -1120,3 +1120,94 @@ REQUEST_URI=/yii-eventapp/index.php/event/eventFilter?keyword=HSC
 in /var/www/yii-eventapp/protected/views/event/eventList.php (23)
 in /var/www/yii-eventapp/protected/controllers/EventController.php (45)
 in /var/www/yii-eventapp/index.php (13)
+2017/01/12 02:32:24 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO saved_search SET name =:name, request_param =:request_param.
+in /var/www/yii-eventapp/protected/components/SaveSearch.php (27)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (132)
+in /var/www/yii-eventapp/index.php (13)
+2017/01/12 02:32:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null. The SQL statement executed was: INSERT INTO saved_search SET name =:name, request_param =:request_param' in /var/www/yii-eventapp/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii-eventapp/protected/components/SaveSearch.php(27): CDbCommand->execute()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(132): SaveSearch->addSaveSearch()
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionAddSaveSearch()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('addsavesearch')
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/addsavese...')
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/addsavesearch
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?keyword=HSC
+---
+2017/01/12 02:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "showdialog".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('showdialog')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('showdialog')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/showdialo...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/showdialog
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?keyword=HSC
+---
+2017/01/12 02:37:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "showdialog".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('showdialog')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('showdialog')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/showdialo...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/showdialog
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?keyword=HSC
+---
+2017/01/12 02:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "showdialog".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('showdialog')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('showdialog')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/showdialo...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/showdialog
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?keyword=HSC
+---
+2017/01/12 02:39:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "showdialog".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('showdialog')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('showdialog')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/showdialo...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/showdialog
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?keyword=HSC
+---
+2017/01/12 02:40:51 [error] [php] Missing argument 1 for CHttpRequest::getParam(), called in /var/www/yii-eventapp/framework/base/CComponent.php on line 111 and defined (/var/www/yii-eventapp/framework/web/CHttpRequest.php:177)
+Stack trace:
+#0 /var/www/yii-eventapp/protected/controllers/EventController.php(140): CHttpRequest->__call()
+#1 /var/www/yii-eventapp/protected/controllers/EventController.php(140): CHttpRequest->param()
+#2 /var/www/yii-eventapp/framework/web/actions/CInlineAction.php(49): EventController->actionShowDialog()
+#3 /var/www/yii-eventapp/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /var/www/yii-eventapp/framework/web/CController.php(286): EventController->runAction()
+#5 /var/www/yii-eventapp/framework/web/CController.php(265): EventController->runActionWithFilters()
+#6 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): EventController->run()
+#7 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/yii-eventapp/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-eventapp/index.php/event/showdialog
+in /var/www/yii-eventapp/protected/controllers/EventController.php (140)
+in /var/www/yii-eventapp/protected/controllers/EventController.php (140)
+in /var/www/yii-eventapp/index.php (13)
+2017/01/12 02:42:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "showdialog".' in /var/www/yii-eventapp/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii-eventapp/framework/web/CController.php(270): CController->missingAction('showdialog')
+#1 /var/www/yii-eventapp/framework/web/CWebApplication.php(282): CController->run('showdialog')
+#2 /var/www/yii-eventapp/framework/web/CWebApplication.php(141): CWebApplication->runController('event/showdialo...')
+#3 /var/www/yii-eventapp/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/yii-eventapp/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-eventapp/index.php/event/showdialog
+HTTP_REFERER=http://localhost/yii-eventapp/index.php/event/eventFilter?keyword=HSC
+---

@@ -31,9 +31,13 @@ $this->breadcrumbs = array(
         <?php endif; ?>
     <?php endif; ?>
 </form>
+<p>
+    <a href="javascript:void(0)" onclick="openCommonDialog()">Already Saved Search</a>
+</p>
 <?php if ((isset($_GET['q']) || isset($_GET['keyword'])) && $dataProvider->getTotalItemCount()) : ?>
     <p>
-        <a href="javascript:void(0)" onclick="openSaveSearchDialog()">Save this Search</a>
+        <a href="javascript:void(0)" onclick="openCommonDialog('showdialog', 
+                                       '<?php echo http_build_query(array('viewFile'=>'application.views.event.dialog_save_search'))?>')">Save this Search</a>
     </p>
 <?php endif; ?>
 <?php
@@ -48,27 +52,9 @@ $this->widget('zii.widgets.CListView', array(
     'summaryText' => ''
 ));
 ?>
-<?php $this->renderPartial('dialog_save_search'); ?>
+<?php //$this->renderPartial('dialog_save_search'); ?>
+    
+<div class="dialog_content"></div>
 
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/js/jqueryui/jquery-ui.css">
 <script src="<?php echo Yii::app()->request->baseUrl ?>/js/jqueryui/jquery-ui.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-    function addSaveSearch() {
-        var nameObj = $('#name');
-        var requestParamObj = $('#request_param');
-        if(!nameObj.val()) return;
-    
-        $.ajax({
-            url:'addsavesearch',
-            type:'post',
-            dataType:'json',
-            async:false,
-            data: {'name':nameObj.val(), 'request_param':requestParamObj.val()},
-            success:function(response){
-                if(response.success) 
-                    $('#add_save_search').dialog('close');   
-            }
-        });
-    }
-</script>

@@ -26,7 +26,7 @@ class EventController extends Controller {
         }
 
         if ($keyword = $_GET['keyword']) {
-            
+
             if (is_array($keyword)) {
                 foreach ($keyword as $key) {
                     $content[] = ' keyword.name="' . $key . '" ';
@@ -34,7 +34,7 @@ class EventController extends Controller {
             } else {
                 $content[] = ' keyword.name="' . $keyword . '" ';
             }
-            
+
             $condition = implode('AND', $content);
             $criteria->join = 'inner join keyword on keyword.eventId = E.id';
             $criteria->condition = $condition;
@@ -133,6 +133,16 @@ class EventController extends Controller {
             echo json_encode(array("success" => true));
             exit();
         }
+    }
+
+    public function actionShowDialog() {
+        $response = new stdClass();
+        $view = Yii::app()->request->getParam('viewFile');
+        $data = array();
+        $response->html = $this->renderPartial($view, $data, true, false);
+
+        echo json_encode($response);
+        exit();
     }
 
 }
